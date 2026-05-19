@@ -21,6 +21,11 @@ class Application extends Model
         'created' => ApplicationCreated::class,
     ];
 
+    protected $fillable = [
+        'status',
+        'order_id',
+    ];
+
     /**
      * Relationships
      */
