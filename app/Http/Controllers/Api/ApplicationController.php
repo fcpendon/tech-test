@@ -22,7 +22,7 @@ class ApplicationController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => "No applications " . ($plan ? "of type '$plan' " : '') . "found.",
-            ], 404);
+            ]);
         }
 
         return $result->paginate($per_page)
