@@ -6,12 +6,7 @@ use App\Models\Application;
 
 class ApplicationService
 {
-    private Application $model;
-
-    public function __construct(Application $model)
-    {
-        $this->model = $model;
-    }
+    public function __construct(private Application $model) {}
 
     public function getApplicationsByPlan(?string $plan)
     {

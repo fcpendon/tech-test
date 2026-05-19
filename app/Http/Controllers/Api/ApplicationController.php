@@ -10,12 +10,7 @@ class ApplicationController extends Controller
 {
     const ITEMS_PER_PAGE = 10;
 
-    private ApplicationService $service;
-
-    public function __construct(ApplicationService $service)
-    {
-        $this->service = $service;
-    }
+    public function __construct(private ApplicationService $service) {}
 
     public function index(Request $request, ?string $plan = null)
     {
